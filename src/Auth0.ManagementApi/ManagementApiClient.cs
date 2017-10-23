@@ -75,6 +75,12 @@ namespace Auth0.ManagementApi
         /// </summary>
         /// <value>The rules.</value>
         public IRulesClient Rules { get; }
+        
+        /// <summary>
+        /// Contains all the methods to call the /rules-configs endpoints.
+        /// </summary>
+        /// <value>The rules.</value>
+        public IRulesConfigsClient RulesConfigs { get; }
 
         /// <summary>
         /// Contains all the methods to call the /stats endpoints.
@@ -141,12 +147,12 @@ namespace Auth0.ManagementApi
             Logs = new LogsClient(apiConnection);
             ResourceServers = new ResourceServersClient(apiConnection);
             Rules = new RulesClient(apiConnection);
+            RulesConfigs = new RulesConfigsClient(apiConnection);
             Stats = new StatsClient(apiConnection);
             TenantSettings = new TenantSettingsClient(apiConnection);
             Tickets = new TicketsClient(apiConnection);
             UserBlocks = new UserBlocksClient(apiConnection);
             Users = new UsersClient(apiConnection);
-
         }
 
         /// <summary>

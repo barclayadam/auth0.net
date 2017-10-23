@@ -65,6 +65,11 @@ namespace Auth0.ManagementApi
         IRulesClient Rules { get; }
 
         /// <summary>
+        /// Contains all the methods to call the /rules-configs endpoints.
+        /// </summary>
+        IRulesConfigsClient RulesConfigs { get; }
+
+        /// <summary>
         /// Contains all the methods to call the /stats endpoints.
         /// </summary>
         IStatsClient Stats { get; }
